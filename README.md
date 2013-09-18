@@ -1,7 +1,9 @@
 connection_pool
 ======================
 
-Generic connection pooling for Ruby.
+Generic (eager and lazy load) connection pooling for Ruby based on [Mike Perham's own connection pool](https://github.com/mperham/connection_pool).
+
+This implementation extends the existing one allowing the user to create connections using lazy loading pattern.
 
 MongoDB has its own connection pool.  ActiveRecord has its own connection pool.  This is a generic connection pool that can be used with anything, e.g. Redis, Dalli and other Ruby network clients.
 
@@ -65,8 +67,3 @@ end
 
 Once you've ported your entire system to use `with`, you can simply
 remove ::Wrapper and use a simple, fast ConnectionPool.
-
-Author
---------------
-
-Mike Perham, [@mperham](https://twitter.com/mperham), <http://mikeperham.com>
