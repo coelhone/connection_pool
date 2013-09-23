@@ -1,4 +1,4 @@
-connection_pool
+connection_pool (eager & lazy loading)
 ======================
 
 Generic (eager and lazy load) connection pooling for Ruby based on [Mike Perham's own connection pool](https://github.com/mperham/connection_pool).
