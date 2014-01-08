@@ -122,8 +122,11 @@ class ConnectionPool
   private
 
   def create_connection
-    @client_creation_block.call
-    @available.increment_connection
+    if conn = @client_creation_block.call
+      @available.increment_connection
+    end
+    
+    conn
   end
 
   def eager_loaded?
